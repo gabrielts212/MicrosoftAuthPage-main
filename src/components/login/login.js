@@ -122,6 +122,7 @@ const Login = () => {
             {isSubmitting ? "Entrando..." : "Entrar"}
           </button>
         </form>
+
         <button
           onClick={handleLogin}
           className="bg-blue-500 text-white w-full p-3 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4 font-semibold"
