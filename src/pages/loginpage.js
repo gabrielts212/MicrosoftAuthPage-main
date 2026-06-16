@@ -6,3 +6,20 @@ export default function Home() {
     </div>
   );
 }
+
+export async function getServerSideProps({ req }) {
+  const token = req.cookies?.authorization;
+
+  if (token) {
+    return {
+      redirect: {
+        destination: "/home",
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {},
+  };
+}
